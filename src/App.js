@@ -11,6 +11,8 @@ import Profile from './pages/Profile/index'
 import Likes from './pages/Likes/index'
 import Search from './pages/Search/index'
 import Aboult from './pages/Aboult/index'
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 // Layout
 import Layout from './layout';
@@ -28,6 +30,8 @@ function App() {
               <Route path='aboult' element={<Aboult />} />
               <Route path='*' element={<NotFound />} />
             </Route>
+              <Route path='login' element={<Login />} />
+              <Route path='register' element={<Register />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -136,7 +136,11 @@ export const MenuConteiner = styled.div`
                         i{
                             display: none;
                          }
-
+                        .boxes_menu_nav_icons{
+                            color: var(--cor-icons);
+                            margin-right: 0;
+                            font-size: 1.8em;
+                        }
                     }
                 }
             }

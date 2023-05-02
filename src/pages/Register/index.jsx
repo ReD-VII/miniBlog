@@ -78,7 +78,7 @@ const Register = () => {
           <div className='boxes_form'>
             <label>
               <span>Password</span>
-              <input type="password" name="confirmPassword" id="confirmPassword" autoComplete="current-password" onChange={(e) => setFormData({ ...formData, confPasswrd: e.target.value })} value={formData.confPasswrd} required />
+              <input type="password" name="confirmPassword" id="confirmPassword" autoComplete="confirm-password" onChange={(e) => setFormData({ ...formData, confPasswrd: e.target.value })} value={formData.confPasswrd} required />
             </label>
           </div>
 

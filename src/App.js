@@ -1,24 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+
+// ROTAS
+import { BrowserRouter, Routes, Route} from "react-router-dom"
+
+// PAGINAS
+import Home from './pages/Home/index'
+import NotFound from './pages/NotFound/index'
+import Profile from './pages/Profile/index'
+import Likes from './pages/Likes/index'
+import Search from './pages/Search/index'
+import Aboult from './pages/Aboult/index'
+import Login from './pages/Login';
+import Register from './pages/Register';
+
+// Layout
+import Layout from './layout';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path='profile' element={<Profile />} />
+              <Route path='likes' element={<Likes />} />
+              <Route path='search' element={<Search />} />
+              <Route path='aboult' element={<Aboult />} />
+              <Route path='*' element={<NotFound />} />
+            </Route>
+              <Route path='login' element={<Login />} />
+              <Route path='register' element={<Register />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
